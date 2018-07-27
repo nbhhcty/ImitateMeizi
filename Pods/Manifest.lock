@@ -1,0 +1,65 @@
+PODS:
+  - Alamofire (4.7.2)
+  - Moya/Core (11.0.2):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (11.0.2):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - PINCache (3.0.1-beta.6):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
+    - PINCache/Core (= 3.0.1-beta.6)
+  - PINCache/Arc-exception-safe (3.0.1-beta.6):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.6):
+    - PINOperation (~> 1.1.0)
+  - PINOperation (1.1.1)
+  - PINRemoteImage/Core (3.0.0-beta.13):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.13):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.13):
+    - PINCache (= 3.0.1-beta.6)
+    - PINRemoteImage/Core
+  - Result (3.2.4)
+  - RxSwift (4.2.0)
+  - Texture (2.6):
+    - Texture/PINRemoteImage (= 2.6)
+  - Texture/Core (2.6)
+  - Texture/PINRemoteImage (2.6):
+    - PINRemoteImage/iOS (= 3.0.0-beta.13)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - Moya/RxSwift
+  - Texture
+  - YYModel
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Moya
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - Result
+    - RxSwift
+    - Texture
+    - YYModel
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
+  PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
+  PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
+  PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: d922da56b72b001ec0c43dd44dd1b05796b20d9f
+
+COCOAPODS: 1.5.3
