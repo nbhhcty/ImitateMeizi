@@ -10,6 +10,13 @@
 		51F4BC7751D0040F6FA0882D /* Pods_ImitateMeizi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAE6EEDB844990F824D190A /* Pods_ImitateMeizi.framework */; };
 		7C026BE2210B2590004EC825 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BE1210B2590004EC825 /* CodableHelper.swift */; };
 		7C026BE6210B2659004EC825 /* MeiziItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BE5210B2659004EC825 /* MeiziItem.swift */; };
+		7C026BE9210EC305004EC825 /* MeiziCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BE8210EC305004EC825 /* MeiziCellNode.swift */; };
+		7C026BEC210F06D8004EC825 /* Test1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BEB210F06D8004EC825 /* Test1ViewController.swift */; };
+		7C026BF0210F087C004EC825 /* TestASTableNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BEF210F087C004EC825 /* TestASTableNode.swift */; };
+		7C026BF2210F18E3004EC825 /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BF1210F18E3004EC825 /* Then.swift */; };
+		7C026BF5210F1BFF004EC825 /* DoubanVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BF4210F1BFF004EC825 /* DoubanVM.swift */; };
+		7C026BF7210F29D0004EC825 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BF6210F29D0004EC825 /* CGFloat+Extension.swift */; };
+		7C026BF9210F2B9F004EC825 /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BF8210F2B9F004EC825 /* Bool+Extension.swift */; };
 		7C0887CA2109B9A100398A5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0887C92109B9A100398A5A /* AppDelegate.swift */; };
 		7C0887CC2109B9A100398A5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0887CB2109B9A100398A5A /* ViewController.swift */; };
 		7C0887CF2109B9A100398A5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0887CD2109B9A100398A5A /* Main.storyboard */; };
@@ -73,6 +80,13 @@
 		1D10BA0360E4F5F5499017AE /* Pods-ImitateMeizi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImitateMeizi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImitateMeizi/Pods-ImitateMeizi.debug.xcconfig"; sourceTree = "<group>"; };
 		7C026BE1210B2590004EC825 /* CodableHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableHelper.swift; sourceTree = "<group>"; };
 		7C026BE5210B2659004EC825 /* MeiziItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeiziItem.swift; sourceTree = "<group>"; };
+		7C026BE8210EC305004EC825 /* MeiziCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeiziCellNode.swift; sourceTree = "<group>"; };
+		7C026BEB210F06D8004EC825 /* Test1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test1ViewController.swift; sourceTree = "<group>"; };
+		7C026BEF210F087C004EC825 /* TestASTableNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestASTableNode.swift; sourceTree = "<group>"; };
+		7C026BF1210F18E3004EC825 /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		7C026BF4210F1BFF004EC825 /* DoubanVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubanVM.swift; sourceTree = "<group>"; };
+		7C026BF6210F29D0004EC825 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		7C026BF8210F2B9F004EC825 /* Bool+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
 		7C0887C62109B9A100398A5A /* ImitateMeizi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImitateMeizi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C0887C92109B9A100398A5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C0887CB2109B9A100398A5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				7C026BE1210B2590004EC825 /* CodableHelper.swift */,
+				7C026BF1210F18E3004EC825 /* Then.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -172,6 +187,31 @@
 				7C026BE5210B2659004EC825 /* MeiziItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7C026BE7210EC285004EC825 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C026BE8210EC305004EC825 /* MeiziCellNode.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C026BEA210F00F1004EC825 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7C026BEB210F06D8004EC825 /* Test1ViewController.swift */,
+				7C026BEF210F087C004EC825 /* TestASTableNode.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7C026BF3210F1BD8004EC825 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C026BF4210F1BFF004EC825 /* DoubanVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7C0887BD2109B9A100398A5A = {
@@ -199,6 +239,9 @@
 		7C0887C82109B9A100398A5A /* ImitateMeizi */ = {
 			isa = PBXGroup;
 			children = (
+				7C026BF3210F1BD8004EC825 /* ViewModel */,
+				7C026BEA210F00F1004EC825 /* ViewController */,
+				7C026BE7210EC285004EC825 /* View */,
 				7C026BE4210B261C004EC825 /* Model */,
 				7C026BE3210B25FC004EC825 /* Tool */,
 				7C0888AF210ACE8B00398A5A /* NetWork */,
@@ -266,6 +309,8 @@
 				7C08888C2109DED000398A5A /* Data+Extensions.swift */,
 				7C08888D2109DED000398A5A /* Array+Extension.swift */,
 				7C08888E2109DED000398A5A /* UITextField+Extensions.swift */,
+				7C026BF6210F29D0004EC825 /* CGFloat+Extension.swift */,
+				7C026BF8210F2B9F004EC825 /* Bool+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -476,6 +521,8 @@
 			files = (
 				7C08889E2109DED000398A5A /* UIViewController+Extension.swift in Sources */,
 				7C0888A52109DED000398A5A /* UIBarButtonItem+Extensions.swift in Sources */,
+				7C026BE9210EC305004EC825 /* MeiziCellNode.swift in Sources */,
+				7C026BEC210F06D8004EC825 /* Test1ViewController.swift in Sources */,
 				7C08889B2109DED000398A5A /* UIWebView+Extensions.swift in Sources */,
 				7C0888982109DED000398A5A /* UIImage+Extensions.swift in Sources */,
 				7C0888A72109DED000398A5A /* Dictionary+Extensions.swift in Sources */,
@@ -485,6 +532,7 @@
 				7C0888AA2109DED000398A5A /* Number+Extensions.swift in Sources */,
 				7C08889A2109DED000398A5A /* UIDevice+Extensions.swift in Sources */,
 				7C0888962109DED000398A5A /* UIView+Extension.swift in Sources */,
+				7C026BF5210F1BFF004EC825 /* DoubanVM.swift in Sources */,
 				7C0888912109DED000398A5A /* UIViewController+Extensions.swift in Sources */,
 				7C0887CA2109B9A100398A5A /* AppDelegate.swift in Sources */,
 				7C08889D2109DED000398A5A /* NSAttributedString+Extensions.swift in Sources */,
@@ -494,10 +542,14 @@
 				7C0888A82109DED000398A5A /* UIScrollView+Extensions.swift in Sources */,
 				7C0888AD2109DED000398A5A /* Array+Extension.swift in Sources */,
 				7C08888F2109DED000398A5A /* UIImageView+Extensions.swift in Sources */,
+				7C026BF9210F2B9F004EC825 /* Bool+Extension.swift in Sources */,
 				7C0888AB2109DED000398A5A /* Date+Extensions.swift in Sources */,
 				7C026BE6210B2659004EC825 /* MeiziItem.swift in Sources */,
+				7C026BF0210F087C004EC825 /* TestASTableNode.swift in Sources */,
 				7C0888B1210ACEDF00398A5A /* DouBanApi.swift in Sources */,
 				7C0888942109DED000398A5A /* UIFont+Extensions.swift in Sources */,
+				7C026BF7210F29D0004EC825 /* CGFloat+Extension.swift in Sources */,
+				7C026BF2210F18E3004EC825 /* Then.swift in Sources */,
 				7C0888902109DED000398A5A /* NSPointerArray+Extensions.swift in Sources */,
 				7C0888992109DED000398A5A /* UINavigationBar+Extensions.swift in Sources */,
 				7C0888A12109DED000398A5A /* UIWindow+Extensions.swift in Sources */,

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         DoubanNetwork.request(target: .category("All", 1),
                               success: { (response) in
                                 print("response_type = \(type(of:response))")
+                                print("response = \(response)")
                                 let iterms = MeiziIterms.decodeJSON(from: response)
                                 print("iterms = \(String(describing: iterms?.category))")
         }) { (error) in
