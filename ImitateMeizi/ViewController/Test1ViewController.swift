@@ -57,7 +57,7 @@ extension Test1ViewController: ASTableDelegate {
     }
     
     func retrieveNextPageWithCompletion(callBack: closures?) {
-        self.p_vm.loadData(suc: { [weak self] (oldCount, iterms) in
+        self.p_vm.loadData(category:.daXiong, suc: { [weak self] (oldCount, iterms) in
             var isFinish: Bool = false
             if let datas = iterms as? [MeiziIterm] {
                 if datas.count > oldCount {

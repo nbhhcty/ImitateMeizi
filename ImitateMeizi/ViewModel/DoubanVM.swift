@@ -11,6 +11,17 @@ import Foundation
 typealias successCB = (_ oldCount: Int, _ result: Any?) -> Void
 // 请求失败的回调
 typealias failureCB = (_ error: Any?) -> Void
+
+enum ECategoryType: String {
+    case all = "All"
+    case daXiong = "DaXiong"
+    case qiaoTun = "QiaoTun"
+    case heiSi = "HeiSi"
+    case meiTui = "MeiTui"
+    case qingXin = "QingXin"
+    case zaHui = "ZaHui"
+}
+
 class DoubanVM {
     
     private var p_curPage: Int = 1
@@ -27,14 +38,14 @@ class DoubanVM {
         self.p_curPage = 1
     }
 
-    func loadData(suc: successCB?, fail: failureCB?) {
+    func loadData(category: ECategoryType, suc: successCB?, fail: failureCB?) {
         guard self.p_hasMoreData == true else {
             if let failure = fail {
                 failure(nil)
             }
             return
         }
-        DoubanNetwork.request(target: .category("All", self.p_curPage),
+        DoubanNetwork.request(target: .category(category.rawValue, self.p_curPage),
                               success: { [weak self] (response) in
                                 if let strongSelf = self {
                                     strongSelf.p_curPage = strongSelf.p_curPage + 1
