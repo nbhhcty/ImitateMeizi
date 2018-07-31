@@ -7,4 +7,5 @@ target 'ImitateMeizi' do
   pod 'Texture'
   pod 'YYModel'
   pod 'Moya/RxSwift'
+  pod 'CYLTabBarController-JDBR'
 end
