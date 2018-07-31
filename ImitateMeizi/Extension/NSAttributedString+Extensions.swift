@@ -354,3 +354,17 @@ public extension NSAttributedString {
         return range ?? NSRange(location: 0, length: string.count)
     }
 }
+
+// MARK: 与业务相关的扩展
+extension NSAttributedString {
+    
+    class func attributedStringForDescription(text: String) -> NSAttributedString {
+        var descriptionAttributes = Dictionary<NSAttributedStringKey, Any>.init()
+        descriptionAttributes[NSAttributedStringKey.font] = UIFont.systemFont(ofSize: 18)
+        descriptionAttributes[NSAttributedStringKey.foregroundColor] = UIColor.white
+        descriptionAttributes[NSAttributedStringKey.backgroundColor] = UIColor.clear
+        let str = NSAttributedString.init(string: text, attributes: descriptionAttributes)
+        return str
+    }
+}
+

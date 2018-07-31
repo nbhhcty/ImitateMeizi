@@ -10,16 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var btn: UIButton = UIButton.init(frame: CGRect.init(x: 100,
+                                                         y: 100,
+                                                         width: 100,
+                                                         height: 40),
+                                      title: "按钮",
+                                      color: .black)
+    
+    @objc func btnAction() {
+        let vc: Test1ViewController = Test1ViewController()
+        self.present(vc, animated: false, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        DoubanNetwork.request(target: .category("All", 1),
-                              success: { (response) in
-                                print("response_type = \(type(of:response))")
-                                print("response = \(response)")
-                                let iterms = MeiziIterms.decodeJSON(from: response)
-                                print("iterms = \(String(describing: iterms?.category))")
-        }) { (error) in
-            print("error = \(error)")
+        self.view.addSubview(self.btn)
+        self.btn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            self.btnAction()
         }
     }
 

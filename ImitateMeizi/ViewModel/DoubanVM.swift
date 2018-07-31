@@ -7,7 +7,10 @@
 //
 
 import Foundation
-
+// 请求成功的回调
+typealias successCB = (_ oldCount: Int, _ result: Any?) -> Void
+// 请求失败的回调
+typealias failureCB = (_ error: Any?) -> Void
 class DoubanVM {
     
     private var p_curPage: Int = 1
@@ -24,11 +27,18 @@ class DoubanVM {
         self.p_curPage = 1
     }
 
-    func loadData() {
+    func loadData(suc: successCB?, fail: failureCB?) {
+        guard self.p_hasMoreData == true else {
+            if let failure = fail {
+                failure(nil)
+            }
+            return
+        }
         DoubanNetwork.request(target: .category("All", self.p_curPage),
                               success: { [weak self] (response) in
                                 if let strongSelf = self {
                                     strongSelf.p_curPage = strongSelf.p_curPage + 1
+                                    let oldCount = strongSelf.p_dataSource.count
                                     if let iterms: MeiziIterms = MeiziIterms.decodeJSON(from: response) {
                                         if iterms.results.count > 0 {
                                             strongSelf.p_dataSource.append(contentsOf: iterms.results)
@@ -37,9 +47,15 @@ class DoubanVM {
                                             strongSelf.p_hasMoreData = false
                                         }
                                     }
+                                    if let succeed = suc {
+                                        succeed(oldCount, strongSelf.p_dataSource)
+                                    }
                                 }
         }) { (error) in
             print("error = \(error)")
+            if let failure = fail {
+                failure(error)
+            }
         }
     }
 }

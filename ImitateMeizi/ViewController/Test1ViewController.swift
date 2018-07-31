@@ -23,11 +23,11 @@ class Test1ViewController: ASViewController<ASDisplayNode> {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         self.p_tableView.frame = self.view.bounds
+        self.p_tableView.leadingScreensForBatching = 1.0;  // 默认值是 2.0
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.addSubnode(self.p_tableView)
     }
 
@@ -48,16 +48,34 @@ extension Test1ViewController: ASTableDelegate {
         return true
     }
     
+    typealias closures = (Bool) -> (Void)
+
     func tableNode(_ tableNode: ASTableNode, willBeginBatchFetchWith context: ASBatchContext) {
-        
+        self.retrieveNextPageWithCompletion { (iterms) -> (Void) in
+            context.completeBatchFetching(true)
+        }
     }
     
-    typealias closures = (Int, String, Double) -> ()
-    
     func retrieveNextPageWithCompletion(callBack: closures?) {
-//        if let cb = callBack {
-//            cb
-//        }
+        self.p_vm.loadData(suc: { [weak self] (oldCount, iterms) in
+            var isFinish: Bool = false
+            if let datas = iterms as? [MeiziIterm] {
+                if datas.count > oldCount {
+                    self?.p_tableView.insertWith(start: oldCount, count: datas.count)
+                    isFinish = true
+                }
+                else {
+                    isFinish = false
+                }
+            }
+            if let cb = callBack {
+                cb(isFinish)
+            }
+        }) { (error) in
+            if let cb = callBack {
+                cb(false)
+            }
+        }
     }
 }
 
@@ -71,8 +89,9 @@ extension Test1ViewController: ASTableDataSource {
     }
     
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
+        let model: MeiziIterm = self.p_vm.p_dataSource[indexPath.row]
         return  {
-            let node: MeiziCellNode = MeiziCellNode()
+            let node: MeiziCellNode = MeiziCellNode.init(model: model)
             return node
         }
     }
