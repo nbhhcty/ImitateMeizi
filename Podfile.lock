@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - CYLTabBarController-JDBR (0.0.1)
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
@@ -33,6 +34,7 @@ PODS:
   - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - CYLTabBarController-JDBR
   - Moya/RxSwift
   - Texture
   - YYModel
@@ -40,6 +42,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - CYLTabBarController-JDBR
     - Moya
     - PINCache
     - PINOperation
@@ -51,6 +54,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  CYLTabBarController-JDBR: 049079a353f00f6760bebcbe5d51b60a63b0206b
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
@@ -60,6 +64,6 @@ SPEC CHECKSUMS:
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: d922da56b72b001ec0c43dd44dd1b05796b20d9f
+PODFILE CHECKSUM: f3aecaba909ecba901515a1e95c1ec2314d74bc0
 
 COCOAPODS: 1.5.3

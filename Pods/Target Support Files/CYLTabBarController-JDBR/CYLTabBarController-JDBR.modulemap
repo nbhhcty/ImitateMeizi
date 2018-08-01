@@ -1,0 +1,6 @@
+framework module CYLTabBarController_JDBR {
+  umbrella header "CYLTabBarController-JDBR-umbrella.h"
+
+  export *
+  module * { export * }
+}
