@@ -103,20 +103,20 @@ extension String {
         return self[Range(r)]
     }
     
-    subscript(r: ClosedRange<Int>) -> String {
-        return self[Range(r)]
-    }
+//    subscript(r: ClosedRange<Int>) -> String {
+//        return self[Range(r)]
+//    }
     
     subscript(r: CountableRange<Int>) -> String {
         return self[Range(r)]
     }
     
-    subscript(r: Range<Int>) -> String {
-        let range = max(0, min(count, r.lowerBound)) ..< min(count, max(0, r.upperBound))
-        let start = index(startIndex, offsetBy: range.lowerBound)
-        let end = index(start, offsetBy: range.upperBound - range.lowerBound)
-        return String(self[start ..< end])
-    }
+//    subscript(r: Range<Int>) -> String {
+//        let range = max(0, min(count, r.lowerBound)) ..< min(count, max(0, r.upperBound))
+//        let start = index(startIndex, offsetBy: range.lowerBound)
+//        let end = index(start, offsetBy: range.upperBound - range.lowerBound)
+//        return String(self[start ..< end])
+//    }
 }
 
 extension String {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51F4BC7751D0040F6FA0882D /* Pods_ImitateMeizi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAE6EEDB844990F824D190A /* Pods_ImitateMeizi.framework */; };
 		7C026BE2210B2590004EC825 /* CodableHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BE1210B2590004EC825 /* CodableHelper.swift */; };
 		7C026BE6210B2659004EC825 /* MeiziItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BE5210B2659004EC825 /* MeiziItem.swift */; };
 		7C026BE9210EC305004EC825 /* MeiziCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C026BE8210EC305004EC825 /* MeiziCellNode.swift */; };
@@ -58,6 +57,17 @@
 		7C0888AD2109DED000398A5A /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C08888D2109DED000398A5A /* Array+Extension.swift */; };
 		7C0888AE2109DED000398A5A /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C08888E2109DED000398A5A /* UITextField+Extensions.swift */; };
 		7C0888B1210ACEDF00398A5A /* DouBanApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0888B0210ACEDF00398A5A /* DouBanApi.swift */; };
+		7C4C437522047D300058765E /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C437422047D300058765E /* AsyncDisplayKit.framework */; };
+		7C4C437722047EA60058765E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C437622047EA60058765E /* Alamofire.framework */; };
+		7C4C437922047EA60058765E /* CYLTabBarController_JDBR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C437822047EA60058765E /* CYLTabBarController_JDBR.framework */; };
+		7C4C437B22047EA60058765E /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C437A22047EA60058765E /* Moya.framework */; };
+		7C4C437D22047EA60058765E /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C437C22047EA60058765E /* PINCache.framework */; };
+		7C4C437F22047EA60058765E /* PINOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C437E22047EA60058765E /* PINOperation.framework */; };
+		7C4C438122047EA60058765E /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C438022047EA60058765E /* PINRemoteImage.framework */; };
+		7C4C438322047EA60058765E /* Pods_ImitateMeizi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C438222047EA60058765E /* Pods_ImitateMeizi.framework */; };
+		7C4C438522047EA60058765E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C438422047EA60058765E /* Result.framework */; };
+		7C4C438722047EA60058765E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C438622047EA60058765E /* RxSwift.framework */; };
+		7C4C438922047EA60058765E /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C438822047EA60058765E /* YYModel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,7 +145,17 @@
 		7C08888D2109DED000398A5A /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		7C08888E2109DED000398A5A /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		7C0888B0210ACEDF00398A5A /* DouBanApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanApi.swift; sourceTree = "<group>"; };
-		7CAE6EEDB844990F824D190A /* Pods_ImitateMeizi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImitateMeizi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C437422047D300058765E /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AsyncDisplayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C437622047EA60058765E /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C437822047EA60058765E /* CYLTabBarController_JDBR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CYLTabBarController_JDBR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C437A22047EA60058765E /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C437C22047EA60058765E /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C437E22047EA60058765E /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C438022047EA60058765E /* PINRemoteImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PINRemoteImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C438222047EA60058765E /* Pods_ImitateMeizi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ImitateMeizi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C438422047EA60058765E /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C438622047EA60058765E /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4C438822047EA60058765E /* YYModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YYModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC8786745D72024917B3EE1 /* Pods-ImitateMeizi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImitateMeizi.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImitateMeizi/Pods-ImitateMeizi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,7 +164,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51F4BC7751D0040F6FA0882D /* Pods_ImitateMeizi.framework in Frameworks */,
+				7C4C437722047EA60058765E /* Alamofire.framework in Frameworks */,
+				7C4C437922047EA60058765E /* CYLTabBarController_JDBR.framework in Frameworks */,
+				7C4C437B22047EA60058765E /* Moya.framework in Frameworks */,
+				7C4C437D22047EA60058765E /* PINCache.framework in Frameworks */,
+				7C4C437F22047EA60058765E /* PINOperation.framework in Frameworks */,
+				7C4C438122047EA60058765E /* PINRemoteImage.framework in Frameworks */,
+				7C4C438322047EA60058765E /* Pods_ImitateMeizi.framework in Frameworks */,
+				7C4C438522047EA60058765E /* Result.framework in Frameworks */,
+				7C4C438722047EA60058765E /* RxSwift.framework in Frameworks */,
+				7C4C438922047EA60058765E /* YYModel.framework in Frameworks */,
+				7C4C437522047D300058765E /* AsyncDisplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +367,17 @@
 		B94110BA13BED790D3652452 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7CAE6EEDB844990F824D190A /* Pods_ImitateMeizi.framework */,
+				7C4C437622047EA60058765E /* Alamofire.framework */,
+				7C4C437822047EA60058765E /* CYLTabBarController_JDBR.framework */,
+				7C4C437A22047EA60058765E /* Moya.framework */,
+				7C4C437C22047EA60058765E /* PINCache.framework */,
+				7C4C437E22047EA60058765E /* PINOperation.framework */,
+				7C4C438022047EA60058765E /* PINRemoteImage.framework */,
+				7C4C438222047EA60058765E /* Pods_ImitateMeizi.framework */,
+				7C4C438422047EA60058765E /* Result.framework */,
+				7C4C438622047EA60058765E /* RxSwift.framework */,
+				7C4C438822047EA60058765E /* YYModel.framework */,
+				7C4C437422047D300058765E /* AsyncDisplayKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
