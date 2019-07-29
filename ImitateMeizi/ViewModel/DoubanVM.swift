@@ -45,6 +45,11 @@ class DoubanVM {
             }
             return
         }
+        LogonNetwork.request(target: .logonToken("123"), success: { (data) in
+            print("data \(data)")
+        }) { (error) in
+            print("error \(error)")
+        }
         DoubanNetwork.request(target: .category(category.rawValue, self.p_curPage),
                               success: { [weak self] (response) in
                                 if let strongSelf = self {

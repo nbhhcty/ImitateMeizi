@@ -10,7 +10,6 @@ import Foundation
 import Moya
 
 public enum Logon {
-    case category(String, Int)
     case logonToken(String)
 }
 
@@ -21,26 +20,35 @@ extension Logon: TargetType {
     
     public var path: String {
         switch self {
-        case .category(let category, let page):
-            return "/category/\(category)/page/\(page)"
+        case .logonToken(_):
+            return "users/loginJgQuickAuth"
         }
     }
     
     public var method: Moya.Method {
-        return .get
+        switch self {
+        case .logonToken:
+            return .get
+        }
     }
     
     public var sampleData: Data {
         switch self {
-        case .category(let category, let page):
-            return "{\"category\": \"\(category)\", \"page\": \(page)}".data(using: String.Encoding.utf8)!
+        case .logonToken(let logonToken):
+            return "{\"category\": \"\(logonToken)\", \"page\": \(logonToken)}".data(using: String.Encoding.utf8)!
         }
     }
     
     public var task: Task {
+        var params:[String : Any] = [:]
+        // 添加公共参数
+//        params["v"] = ProjectInfo.appVersionWithOutPoint()
+//        params["dev"] = ProjectInfo.platform()
+        
         switch self {
-        case .category( _, _):
-            return .requestPlain
+        case .logonToken( let logonToken ):
+            params["loginToken"] = logonToken
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }
     }
     
@@ -56,9 +64,9 @@ struct LogonNetwork {
     // 请求失败的回调
     typealias failureCallback = (_ error: MoyaError) -> Void
     // 单例
-    static let provider = MoyaProvider<DouBan>()
+    static let provider = MoyaProvider<Logon>()
     // 发送网络请求
-    static func request( target: DouBan,
+    static func request( target: Logon,
                          success: @escaping successCallback,
                          failure: @escaping failureCallback ) {
         provider.request(target) { result in
