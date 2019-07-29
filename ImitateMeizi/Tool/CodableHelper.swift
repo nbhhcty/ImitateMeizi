@@ -11,7 +11,7 @@ import Foundation
 //扩展Encodable协议,添加编码的方法
 public extension Encodable {
     //1.遵守Codable协议的对象转json字符串
-    public func toJSONString() -> String? {
+    func toJSONString() -> String? {
         guard let data = try? JSONEncoder().encode(self) else {
             return nil
         }
@@ -19,7 +19,7 @@ public extension Encodable {
     }
     
     //2.对象转换成jsonObject
-    public func toJSONObject() -> Any? {
+    func toJSONObject() -> Any? {
         guard let data = try? JSONEncoder().encode(self) else {
             return nil
         }
@@ -30,7 +30,7 @@ public extension Encodable {
 //扩展Decodable协议,添加解码的方法
 public extension Decodable {
     //3.json字符串转对象&数组
-    public static func decodeJSON(from string: String?, designatedPath: String? = nil) -> Self? {
+    static func decodeJSON(from string: String?, designatedPath: String? = nil) -> Self? {
         
         guard let data = string?.data(using: .utf8),
             let jsonData = getInnerObject(inside: data, by: designatedPath) else {
@@ -40,7 +40,7 @@ public extension Decodable {
     }
     
     //4.jsonObject转换对象或者数组
-    public static func decodeJSON(from jsonObject: Any?, designatedPath: String? = nil) -> Self? {
+    static func decodeJSON(from jsonObject: Any?, designatedPath: String? = nil) -> Self? {
         
         guard let jsonObject = jsonObject,
             JSONSerialization.isValidJSONObject(jsonObject),
@@ -55,7 +55,7 @@ public extension Decodable {
 //扩展Array,添加将jsonString或者jsonObject解码到对应对象数组的方法
 public extension Array where Element: Codable {
     
-    public static func decodeJSON(from jsonString: String?, designatedPath: String? = nil) -> [Element?]? {
+    static func decodeJSON(from jsonString: String?, designatedPath: String? = nil) -> [Element?]? {
         guard let data = jsonString?.data(using: .utf8),
             let jsonData = getInnerObject(inside: data, by: designatedPath),
             let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as? [Any] else {
@@ -64,7 +64,7 @@ public extension Array where Element: Codable {
         return Array.decodeJSON(from: jsonObject)
     }
     
-    public static func decodeJSON(from array: [Any]?) -> [Element?]? {
+    static func decodeJSON(from array: [Any]?) -> [Element?]? {
         return array?.map({ (item) -> Element? in
             return Element.decodeJSON(from: item)
         })

@@ -68,6 +68,7 @@
 		7C4C438522047EA60058765E /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C438422047EA60058765E /* Result.framework */; };
 		7C4C438722047EA60058765E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C438622047EA60058765E /* RxSwift.framework */; };
 		7C4C438922047EA60058765E /* YYModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4C438822047EA60058765E /* YYModel.framework */; };
+		7CC2F87922EEC8B300178A54 /* LogonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC2F87822EEC8B300178A54 /* LogonApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		7C4C438422047EA60058765E /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4C438622047EA60058765E /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4C438822047EA60058765E /* YYModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YYModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CC2F87822EEC8B300178A54 /* LogonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogonApi.swift; sourceTree = "<group>"; };
 		EDC8786745D72024917B3EE1 /* Pods-ImitateMeizi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImitateMeizi.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImitateMeizi/Pods-ImitateMeizi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -360,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				7C0888B0210ACEDF00398A5A /* DouBanApi.swift */,
+				7CC2F87822EEC8B300178A54 /* LogonApi.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				7C0888AE2109DED000398A5A /* UITextField+Extensions.swift in Sources */,
 				7C0888972109DED000398A5A /* UIColor+Extensions.swift in Sources */,
 				7C08889C2109DED000398A5A /* UIScreen+Extensions.swift in Sources */,
+				7CC2F87922EEC8B300178A54 /* LogonApi.swift in Sources */,
 				7C0888952109DED000398A5A /* UITextView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
