@@ -11,24 +11,29 @@ import Moya
 
 public enum Logon {
     case logonToken(String)
+    case contact
 }
 
 extension Logon: TargetType {
     public var baseURL: URL {
-        return "http://localhost:8080".url!
+        return "http://192.168.1.2:8181".url!
     }
     
     public var path: String {
         switch self {
         case .logonToken(_):
-            return "users/loginJgQuickAuth"
+            return "users/login"
+        case .contact:
+            return "contact"
         }
     }
     
     public var method: Moya.Method {
         switch self {
         case .logonToken:
-            return .get
+            return .post
+        case .contact:
+            return .post
         }
     }
     
@@ -36,6 +41,8 @@ extension Logon: TargetType {
         switch self {
         case .logonToken(let logonToken):
             return "{\"category\": \"\(logonToken)\", \"page\": \(logonToken)}".data(using: String.Encoding.utf8)!
+        case .contact:
+            return "2008".data(using: String.Encoding.utf8)!
         }
     }
     
@@ -48,13 +55,37 @@ extension Logon: TargetType {
         switch self {
         case .logonToken( let logonToken ):
             params["loginToken"] = logonToken
-            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+//            return .requestJSONEncodable(["loginToken": "account"])
+//            return .requestData(jsonToData(jsonDic: ["loginToken":"account"  ,"last_name":"password"])!) //参数放在HttpBody中
+//            return .requestParameters(parameters: ["loginToken": "firstName", "last_name": "lastName"], encoding: JSONEncoding.default)
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .contact:
+            return .requestPlain
         }
     }
     
-    public var headers: [String : String]? {
+    
+    
+    public var headers: [String: String]? {
+//        return nil
+        return ["Content-type": "application/json"]
+    }
+}
+//------------------------
+//字典转Data
+private func jsonToData(jsonDic:Dictionary<String, Any>) -> Data? {
+    if (!JSONSerialization.isValidJSONObject(jsonDic)) {
+        print("is not a valid json object")
         return nil
     }
+    //利用自带的json库转换成Data
+    //如果设置options为JSONSerialization.WritingOptions.prettyPrinted，则打印格式更好阅读
+    let data = try? JSONSerialization.data(withJSONObject: jsonDic, options: [])
+    //Data转换成String打印输出
+    let str = String(data:data!, encoding: String.Encoding.utf8)
+    //输出json字符串
+    print("Json Str:\(str!)")
+    return data
 }
 
 // 网络请求结构体
