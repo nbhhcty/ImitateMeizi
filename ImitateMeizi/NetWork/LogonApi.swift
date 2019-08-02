@@ -10,65 +10,114 @@ import Foundation
 import Moya
 
 public enum Logon {
-    case logonToken(String)
-    case contact
+    case login1(String)
+    case login2(String)
+    case login3(String)
+    case login4(String)
+    case login5(String)
+    case login6(String)
 }
 
 extension Logon: TargetType {
     public var baseURL: URL {
-        return "http://192.168.1.2:8181".url!
+        let isAtHome: Bool = false
+        if isAtHome {
+            return "http://192.168.1.2:8181".url!
+        }
+        else {
+            return "http://10.1.1.141:8181".url!
+        }
     }
     
     public var path: String {
         switch self {
-        case .logonToken(_):
+        case .login1(_):
             return "users/login"
-        case .contact:
-            return "contact"
+        case .login2(_):
+            return "users/login"
+        case .login3(_):
+            return "users/login"
+        case .login4(_):
+            return "users/login"
+        case .login5(_):
+            return "users/login"
+        case .login6(_):
+            return "users/login"
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .logonToken:
+        case .login1:
             return .post
-        case .contact:
+        case .login2:
+            return .post
+        case .login3:
+            return .post
+        case .login4:
+            return .post
+        case .login5:
+            return .post
+        case .login6:
             return .post
         }
     }
     
     public var sampleData: Data {
         switch self {
-        case .logonToken(let logonToken):
-            return "{\"category\": \"\(logonToken)\", \"page\": \(logonToken)}".data(using: String.Encoding.utf8)!
-        case .contact:
+        case .login1:
+            return "2008".data(using: String.Encoding.utf8)!
+        case .login2:
+            return "2008".data(using: String.Encoding.utf8)!
+        case .login3:
+            return "2008".data(using: String.Encoding.utf8)!
+        case .login4:
+            return "2008".data(using: String.Encoding.utf8)!
+        case .login5:
+            return "2008".data(using: String.Encoding.utf8)!
+        case .login6:
             return "2008".data(using: String.Encoding.utf8)!
         }
     }
     
+    /// 1、2、4、6可以被golang解析，3和5不可以
     public var task: Task {
         var params:[String : Any] = [:]
         // 添加公共参数
 //        params["v"] = ProjectInfo.appVersionWithOutPoint()
 //        params["dev"] = ProjectInfo.platform()
-        
         switch self {
-        case .logonToken( let logonToken ):
+        case .login1( let logonToken ):
             params["loginToken"] = logonToken
-//            return .requestJSONEncodable(["loginToken": "account"])
-//            return .requestData(jsonToData(jsonDic: ["loginToken":"account"  ,"last_name":"password"])!) //参数放在HttpBody中
-//            return .requestParameters(parameters: ["loginToken": "firstName", "last_name": "lastName"], encoding: JSONEncoding.default)
+            return .requestJSONEncodable(["loginToken": logonToken])
+            
+        case .login2( let logonToken ):
+            params["loginToken"] = logonToken
+            return .requestData(jsonToData(jsonDic: ["loginToken": logonToken])!) //参数放在HttpBody中
+            
+        case .login3( let logonToken ):
+            params["loginToken"] = logonToken
+            return .requestParameters(parameters: params, encoding: PropertyListEncoding.default)
+            
+        case .login4( let logonToken ):
+            params["loginToken"] = logonToken
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
-        case .contact:
-            return .requestPlain
+            
+        case .login5( let logonToken ):
+            params["loginToken"] = logonToken
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+            
+        case .login6( let logonToken ):
+            params["loginToken"] = logonToken
+            return .requestParameters(parameters: ["loginToken": logonToken], encoding: JSONEncoding.default)
         }
     }
     
     
     
     public var headers: [String: String]? {
-//        return nil
-        return ["Content-type": "application/json"]
+        return nil
+//        return ["Content-type": "application/json"]
     }
 }
 //------------------------

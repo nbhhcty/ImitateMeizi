@@ -16,6 +16,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        LogonNetwork.request(target: .login1("1"), success: { (data) in
+            print("data \(data)")
+        }) { (error) in
+            print("error \(error)")
+        }
+        LogonNetwork.request(target: .login2("2"), success: { (data) in
+            print("data \(data)")
+        }) { (error) in
+            print("error \(error)")
+        }
+        LogonNetwork.request(target: .login3("3"), success: { (data) in
+            print("data \(data)")
+        }) { (error) in
+            print("error \(error)")
+        }
+        LogonNetwork.request(target: .login4("4"), success: { (data) in
+            print("data \(data)")
+        }) { (error) in
+            print("error \(error)")
+        }
+        LogonNetwork.request(target: .login5("5"), success: { (data) in
+            print("data \(data)")
+        }) { (error) in
+            print("error \(error)")
+        }
+        LogonNetwork.request(target: .login6("6"), success: { (data) in
+            print("data \(data)")
+        }) { (error) in
+            print("error \(error)")
+        }
         return true
     }
 
