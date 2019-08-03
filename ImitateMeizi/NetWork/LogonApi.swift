@@ -20,9 +20,9 @@ public enum Logon {
 
 extension Logon: TargetType {
     public var baseURL: URL {
-        let isAtHome: Bool = false
+        let isAtHome: Bool = true
         if isAtHome {
-            return "http://192.168.1.2:8181".url!
+            return "http://192.168.1.3:8181".url!
         }
         else {
             return "http://10.1.1.141:8181".url!

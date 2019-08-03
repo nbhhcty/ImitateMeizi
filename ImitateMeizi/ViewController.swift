@@ -30,6 +30,9 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             self.btnAction()
         }
+        
+        let str: String = "KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="
+        print("str.length = \(str.length)")
     }
 
     override func didReceiveMemoryWarning() {

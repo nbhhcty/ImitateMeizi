@@ -12,8 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         LogonNetwork.request(target: .login1("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
@@ -21,31 +20,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }) { (error) in
             print("error \(error)")
         }
-        LogonNetwork.request(target: .login2("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
-            print("data \(data)")
-        }) { (error) in
-            print("error \(error)")
-        }
-        LogonNetwork.request(target: .login3("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
-            print("data \(data)")
-        }) { (error) in
-            print("error \(error)")
-        }
-        LogonNetwork.request(target: .login4("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
-            print("data \(data)")
-        }) { (error) in
-            print("error \(error)")
-        }
-        LogonNetwork.request(target: .login5("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
-            print("data \(data)")
-        }) { (error) in
-            print("error \(error)")
-        }
-        LogonNetwork.request(target: .login6("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
-            print("data \(data)")
-        }) { (error) in
-            print("error \(error)")
-        }
+//        LogonNetwork.request(target: .login2("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
+//            print("data \(data)")
+//        }) { (error) in
+//            print("error \(error)")
+//        }
+//        LogonNetwork.request(target: .login3("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
+//            print("data \(data)")
+//        }) { (error) in
+//            print("error \(error)")
+//        }
+//        LogonNetwork.request(target: .login4("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
+//            print("data \(data)")
+//        }) { (error) in
+//            print("error \(error)")
+//        }
+//        LogonNetwork.request(target: .login5("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
+//            print("data \(data)")
+//        }) { (error) in
+//            print("error \(error)")
+//        }
+//        LogonNetwork.request(target: .login6("KkM_EPNVgIGZ8Um0s3fOAO_PMEbFsmoJs8mkbJLYh89UO0hOQ7FngEPOC9ztACLC4znFswjxK-e0GuotP0Knp7SR4tNdh74FAcSmfH14kwfnRG6Wj3cQFtv9BJGVayvdk0RS4q1x-CKB5lMAUuL47cg5AvdV0UxS71pmICk3qQo="), success: { (data) in
+//            print("data \(data)")
+//        }) { (error) in
+//            print("error \(error)")
+//        }
         return true
     }
 
